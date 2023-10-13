@@ -69,7 +69,7 @@
               <p class="card-text"> {{$subscription->description}}</p>
             </div>
             <div class="card-body text-center">
-              <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+              <a href="{{route('getSubscription.dashboard',$subscription->id)}}" class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</a>
             </div>
           </div>
         </div>

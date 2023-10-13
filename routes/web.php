@@ -19,13 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
+Route::prefix('dashboard')->middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard',function(){
+    Route::get('/',function(){
         return view('dashboard');
     })->name('dashboard');
-    // Route::get('/dashboard',[SubscriptionController::class,"index"])->name('index.dashboard');
+
+    // subscription routes
+
+    Route::get('/subscriptions/{id}',[SubscriptionController::class,"getSubscription"])->name('getSubscription.dashboard');
 });
