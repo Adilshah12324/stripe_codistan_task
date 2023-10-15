@@ -3,11 +3,11 @@ namespace App\Trait;
 
 use App\Models\Subscription;
 
-trait BelongsToManySubscriptions{
+trait BelongsToSubscriptions{
 
     public function subscriptions()
     {
-        return $this->BelongsToMany(Subscription::class);
+        return $this->belongsTo(Subscription::class);
     }
 }
 ?>

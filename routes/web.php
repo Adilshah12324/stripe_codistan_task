@@ -25,10 +25,12 @@ Route::prefix('dashboard')->middleware([
     'verified',
 ])->group(function () {
     Route::get('/',function(){
+
         return view('dashboard');
     })->name('dashboard');
 
     // subscription routes
-
-    Route::get('/subscriptions/{id}',[SubscriptionController::class,"getSubscription"])->name('getSubscription.dashboard');
+    Route::get('/subscriptions/{id}',[SubscriptionController::class,"checkout"])->name('checkout.subscription');
+    Route::get('/success', [SubscriptionController::class,'success'])->name('checkout.success');
+    Route::get('/cancel', [SubscriptionController::class,'cancel'])->name('checkout.cancel');
 });

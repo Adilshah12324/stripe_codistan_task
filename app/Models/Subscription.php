@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use App\Trait\BelongsToManyUsers;
+
+use App\Trait\HasManyOrders;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Subscription extends Model
 {
     use HasFactory;
-    use BelongsToManyUsers;
+    use HasManyOrders;
 
     protected $fillable = [
         'user_id',

@@ -20,17 +20,17 @@ class SubscriptionSeeder extends Seeder
             [
             'name' => 'Basic',
             'description' => $faker->paragraph(),
-            'price' => 30,
+            'price' => 6000,
             ],
             [
                 'name' => 'Standard',
                 'description' => $faker->paragraph(),
-                'price' => 50,
+                'price' => 7500,
             ],
             [
                 'name' => 'Premium',
                 'description' => $faker->paragraph(),
-                'price' => 80,
+                'price' => 9000,
             ]
         ]);
         //
