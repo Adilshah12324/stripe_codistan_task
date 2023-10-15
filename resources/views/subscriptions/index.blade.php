@@ -47,11 +47,11 @@
 
 </head>
 <body>
-
-
-
-
-
+  @if(session('error'))
+  <div class="alert alert-danger">
+      {{ session('error') }}
+  </div>
+@endif
   <div class="container-fluid" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
     <div class="container p-5">
       <div class="row">
